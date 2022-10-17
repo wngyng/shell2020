@@ -49,7 +49,7 @@ echo "yum仓库创建完成！！！"
 
 #epel-6公网云配置
 createEpel (){
-cd /etc/yum.repos.d/     
+cd /etc/yum.repos.d/ || exit     
 wget http://files.tttidc.com/centos6/epel-6.repo
 yum clean all
 yum makecache
